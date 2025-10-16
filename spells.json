@@ -1,0 +1,57 @@
+[{
+        "name": "Acid Splash",
+        "damageType": "Acid",
+        "level": "Cantrip",
+        "school": "Conjuration",
+        "description": "You hurl a bubble of acid. Choose one creature within range, or choose two creatures within range that are within 5 feet of each other. A target must succeed on a Dexterity saving throw or take 1d6 acid damage."
+    },
+    {
+        "name": "Ice Storm",
+        "damageType": "Cold",
+        "level": "4",
+        "school": "Evocation",
+        "description": "the caster summons a hailstorm in a 40-foot tall cylinder with a 20-foot radius. Creatures within the cylinder must make a Dexterity saving throw against the caster's spell save DC. A failure takes 2d8 bludgeoning damage and 4d6 cold damage."
+    },
+    {
+        "name": "Crown of Stars",
+        "damageType": "Radiant",
+        "level": "7",
+        "school": "Evocation",
+        "description": "Seven star-like motes of light appear and orbit your head until the spell ends. You can use a bonus action to send one of the motes streaking toward one creature or object within 120 feet of you. When you do so, make a ranged spell attack. On a hit, the target takes 4d12 radiant damage."
+    },
+    {
+        "name": "Thunderous Smite",
+        "damageType": "Thunder",
+        "level": "1",
+        "school": "Evocation",
+        "description": "The first time you hit with a melee weapon attack during this spell's duration, your weapon rings with thunder that is audible within 300 feet of you, and the attack deals an extra 2d6 thunder damage to the target."
+    },
+    {
+        "name": "Poison Spray",
+        "damageType": "Poison",
+        "level": "Cantrip",
+        "school": "Conjuration",
+        "description": "You extend your hand toward a creature you can see within range and project a puff of noxious gas from your palm. The creature must succeed on a Constitution saving throw or take 1d12 poison damage. This spell's damage increases by 1d12 when you reach 5th level (2d12), 11th level (3d12), and 17th level (4d12)."
+    },
+    {
+        "name": "Raulothim's Psychic Lance",
+        "damageType": "Psychic",
+        "level": "4",
+        "school": "Enchantment",
+        "description": "You unleash a shimmering lance of psychic power from your forehead at a creature that you can see within range. Alternatively, you can utter a creature's name. If the named target is within range, it becomes the spell's target even if you can't see it."
+    },
+    {
+        "name": "Fireball",
+        "damageType": "Fire",
+        "level": "3",
+        "school": "Evocation",
+        "description": "Fireball is a third-level spell appearing on both the sorcerer and wizard spell lists. It has a 20 foot radius area and deals 8d6 damage, with a save for half. It can be cast in a higher level spell slot to increase the damage by 1d6 per spell slot above third level."
+    },
+    {
+        "name": "Fireball",
+        "damageType": "Fire",
+        "level": "3",
+        "school": "Evocation",
+        "description": "Fireball is a third-level spell appearing on both the sorcerer and wizard spell lists. It has a 20 foot radius area and deals 8d6 damage, with a save for half. It can be cast in a higher level spell slot to increase the damage by 1d6 per spell slot above third level."
+    }
+]

@@ -1,0 +1,57 @@
+[{
+        "name": "Young Black Dragon",
+        "type": "Dragon",
+        "hp": "127",
+        "armor": "18",
+        "vulnerabilities": "None",
+        "immunity": "Acid"
+    },
+    {
+        "name": "Shadow Demon",
+        "type": "Fiend",
+        "hp": "66",
+        "armor": "13",
+        "vulnerabilities": "Radiant",
+        "immunity": "Cold"
+    },
+    {
+        "name": "Earth Elemental",
+        "type": "Elemental",
+        "hp": "126",
+        "armor": "17",
+        "vulnerabilities": "Thunder",
+        "immunity": "Poison"
+    },
+    {
+        "name": "Flumph",
+        "type": "Aberration",
+        "hp": "7",
+        "armor": "12",
+        "vulnerabilities": "Psychic",
+        "immunity": "None"
+    },
+    {
+        "name": "Dust Mephit",
+        "type": "Elemental",
+        "hp": "17",
+        "armor": "12",
+        "vulnerabilities": "Fire",
+        "immunity": "Poison"
+    },
+    {
+        "name": "Mummy",
+        "type": "Undead",
+        "hp": "58",
+        "armor": "11",
+        "vulnerabilities": "Fire",
+        "immunity": "Necrodic, Poison"
+    },
+    {
+        "name": "Fire Snake",
+        "type": "Elemental",
+        "hp": "22",
+        "armor": "14",
+        "vulnerabilities": "Cold",
+        "immunity": "Fire"
+    }
+]
