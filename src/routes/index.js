@@ -1,6 +1,6 @@
 const express = require("express");
 const routes = express.Router();
-const homeRoute = require("../controllers/homeController");
+const homeRoute = require("../controllers/homeLoginController");
 const spells = require("./spellsRoute");
 const monsters = require("./monstersRoute");
 
