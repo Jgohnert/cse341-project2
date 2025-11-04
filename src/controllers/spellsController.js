@@ -44,15 +44,22 @@ async function getSpellByType(req, res) {
         }
     }).toArray();
 
-    const monsters = await db.collection("monsters").find({
+    const monstersVulnerabilities = await db.collection("monsters").find({
         vulnerabilities: {
+            $regex: new RegExp(spellType, "i")
+        }
+    }).toArray();
+
+    const monstersImmunities = await db.collection("monsters").find({
+        immunity: {
             $regex: new RegExp(spellType, "i")
         }
     }).toArray();
 
     res.status(200).json({
         spells,
-        monsters
+        monstersVulnerabilities,
+        monstersImmunities
     });
 }
 

@@ -6,7 +6,8 @@ const swaggerUi = require("swagger-ui-express");
 const swaggerDocument = require("./swagger.json");
 require("dotenv").config();
 const {
-    auth
+    auth,
+    requiresAuth
 } = require("express-openid-connect");
 
 const config = {
@@ -21,7 +22,7 @@ const config = {
 app
     .use(auth(config))
     .use(bodyParser.json())
-    .use("/api-docs", swaggerUi.serve, swaggerUi.setup(swaggerDocument))
+    .use("/api-docs", requiresAuth(), swaggerUi.serve, swaggerUi.setup(swaggerDocument))
     .use("/", require("./src/routes"));
 
 const port = process.env.PORT || 3000;
