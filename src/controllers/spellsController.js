@@ -15,8 +15,27 @@ async function allSpells(req, res) {
     res.status(200).json(spellList);
 }
 
+async function searchSpells(req, res) {
+    const db = mongodb.getDb();
+    const spellName = req.params.name.toUpperCase();
+
+    const spell = await db.collection("spells").find({
+        name: {
+            $regex: new RegExp(spellName, "i")
+        }
+    }).toArray();
+
+    if (!spell || spell.length === 0) {
+        res.status(400).json({
+            message: "Spell not found."
+        });
+    }
+
+    res.status(200).json(spell);
+}
+
 //Gets all spells by their type, such as cold, fire, and acid.
-//It also gets the monsters who are vulnerable to that type of magic
+//It also gets the monsters who are vulnerable and immune to that type of magic
 async function getSpellByType(req, res) {
     const db = mongodb.getDb();
     const spellType = req.params.damageType.toLowerCase();
@@ -151,6 +170,7 @@ async function deleteSpells(req, res) {
 
 module.exports = {
     allSpells,
+    searchSpells,
     getSpellByType,
     addSpell,
     updateSpells,

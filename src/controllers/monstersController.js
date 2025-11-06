@@ -15,6 +15,25 @@ async function allMonsters(req, res) {
     res.status(200).json(monsterList);
 }
 
+async function searchMonsters(req, res) {
+    const db = mongodb.getDb();
+    const monsterName = req.params.name.toUpperCase();
+
+    const monster = await db.collection("monsters").find({
+        name: {
+            $regex: new RegExp(monsterName, "i")
+        }
+    }).toArray();
+
+    if (!monster || monster.length === 0) {
+        res.status(400).json({
+            message: "Monster not found."
+        });
+    }
+
+    res.status(200).json(monster);
+}
+
 async function addMonster(req, res) {
     const db = mongodb.getDb();
 
@@ -105,6 +124,7 @@ async function deleteMonsters(req, res) {
 
 module.exports = {
     allMonsters,
+    searchMonsters,
     addMonster,
     updateMonsters,
     deleteMonsters

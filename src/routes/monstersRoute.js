@@ -5,6 +5,8 @@ const errorHandling = require("../../utilities/generalErrorHandling");
 
 router.get("/", monstersController.allMonsters);
 
+router.get("/:name", monstersController.searchMonsters);
+
 router.post(
     "/",
     validation.monsterRules(),

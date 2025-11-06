@@ -5,7 +5,9 @@ const errorHandling = require("../../utilities/generalErrorHandling");
 
 router.get("/", spellsController.allSpells);
 
-router.get("/:damageType", spellsController.getSpellByType);
+router.get("/name/:name", spellsController.searchSpells);
+
+router.get("/damageType/:damageType", spellsController.getSpellByType);
 
 router.post(
     "/",
